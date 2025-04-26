@@ -12,3 +12,5 @@ c#/bin
 c#/obj
 c#/*.csproj
 *.sln
+
+node_modules
