@@ -1,4 +1,4 @@
-export default function arrayBufferSandbox() {
+function arrayBufferSandbox() {
   const buffer = new ArrayBuffer(6);
   const a8View = new Uint8Array(buffer);
   const a16View = new Uint16Array(buffer);
@@ -18,3 +18,5 @@ export default function arrayBufferSandbox() {
   console.log(a16View);
   console.log(buffer);
 }
+
+arrayBufferSandbox();
