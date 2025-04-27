@@ -1,3 +1,5 @@
+import chalk from "chalk";
+
 function arrayBufferSandbox() {
   const buffer = new ArrayBuffer(6);
   const a8View = new Uint8Array(buffer);
