@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "arrayBufferSandbox": "ts-node-dev --respawn ./javascript/arrays/arrayBufferSandbox.ts"
+    "arraySandbox": "ts-node-dev --respawn ./javascript/arrays/sandbox.ts"
   },
   "author": "",
   "license": "ISC",
