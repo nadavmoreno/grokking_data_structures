@@ -3,7 +3,7 @@ import StaticArray from "./StaticArray";
 import UnsortedArray from "./UnsortedArray";
 
 function arrayBufferSandbox() {
-  console.log(chalk.blue.bold.bgYellowBright("ARRAY BUFFER SANDBOX"));
+  console.log(chalk.blue.bold("ARRAY BUFFER SANDBOX"));
   const buffer = new ArrayBuffer(6);
   const a8View = new Uint8Array(buffer);
   const a16View = new Uint16Array(buffer);
@@ -25,18 +25,29 @@ function arrayBufferSandbox() {
 }
 
 function staticArraySandbox() {
-  console.log(chalk.blue.bold.bgYellowBright("STATIC ARRAY SANDBOX"));
-  const arr = new StaticArray(6, "I");
-  arr.set(0, 259);
+  console.log(chalk.blue.bold("STATIC ARRAY SANDBOX"));
+  const arr = new StaticArray(6, "B");
+  arr.setValue(0, 28);
 
-  console.log(arr.get(0));
-  console.log(arr);
-  // console.log(arr.length);
+  console.log(arr.getValue(0));
+  // console.log(arr);
+  console.log(arr.length);
 }
 
 function unsortedArraySandbox() {
-  console.log(chalk.blue.bold.bgYellowBright("UNSORTED ARRAY SANDBOX"));
+  console.log(chalk.blue.bold("UNSORTED ARRAY SANDBOX"));
   const arr = new UnsortedArray(8, "B");
+  arr.insert(9);
+  arr.insert(33);
+  arr.insert(33);
+  arr.insert(33);
+  arr.insert(33);
+  arr.insert(33);
+  arr.insert(33);
+  arr.insert(33);
+  arr.insert(33);
+  // arr.insert(33);
+  // arr.insert(33);
 }
 // arrayBufferSandbox();
 // staticArraySandbox();

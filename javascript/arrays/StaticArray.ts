@@ -54,7 +54,7 @@ class StaticArray {
   }
 
   // TODO: value should by constrained by the array type
-  set(index: number, value: number): void {
+  setValue(index: number, value: number): void {
     if (index < 0 || index >= this.size) {
       throw new Error("Index out of bounds");
     }
@@ -62,16 +62,16 @@ class StaticArray {
     this.array[index] = value;
   }
 
-  get length(): number {
-    return this.size;
-  }
-
-  get(index: number): number | bigint {
+  getValue(index: number): number | bigint {
     if (index < 0 || index >= this.size) {
       throw new Error("Index out of bounds");
     }
 
     return this.array[index];
+  }
+
+  get length(): number {
+    return this.size;
   }
 
   get arr(): TypedArray {
