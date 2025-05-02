@@ -30,7 +30,6 @@ function staticArraySandbox() {
   arr.setValue(0, 28);
 
   console.log(arr.getValue(0));
-  // console.log(arr);
   console.log(arr.length);
 }
 
@@ -45,10 +44,11 @@ function unsortedArraySandbox() {
   arr.insert(33);
   arr.insert(33);
   arr.insert(33);
-  arr.insert(33);
+  // arr.insert(33);
   // arr.insert(33);
   // arr.insert(33);
 }
+
 // arrayBufferSandbox();
 // staticArraySandbox();
-unsortedArraySandbox();
+// unsortedArraySandbox();
