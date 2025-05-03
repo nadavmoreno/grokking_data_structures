@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "arraySandbox": "ts-node-dev --respawn ./javascript/arrays/sandbox.ts"
+    "arraySandbox": "ts-node-dev --respawn ./javascript/arrays/sandbox.ts",
+    "statisticsExample": "ts-node-dev --respawn ./javascript/arrays/unsorted-array/example-statistics.ts"
   },
   "author": "",
   "license": "ISC",

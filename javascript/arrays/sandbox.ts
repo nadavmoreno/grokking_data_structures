@@ -1,6 +1,6 @@
 import chalk from "chalk";
 import StaticArray from "./StaticArray";
-import UnsortedArray from "./UnsortedArray";
+import UnsortedArray from "./unsorted-array/UnsortedArray";
 
 function arrayBufferSandbox() {
   console.log(chalk.blue.bold("ARRAY BUFFER SANDBOX"));
@@ -38,17 +38,24 @@ function unsortedArraySandbox() {
   const arr = new UnsortedArray(8, "B");
   arr.insert(9);
   arr.insert(33);
-  arr.insert(33);
-  arr.insert(33);
-  arr.insert(33);
-  arr.insert(33);
-  arr.insert(33);
-  arr.insert(33);
+  arr.insert(99);
   // arr.insert(33);
   // arr.insert(33);
   // arr.insert(33);
+  // arr.insert(33);
+  // arr.insert(33);
+  // arr.insert(33);
+  // arr.insert(33);
+  // arr.insert(33);
+  // console.log(arr.length);
+  // console.log(arr.print());
+  // arr.delete(0);
+  // console.log(arr.length);
+  // console.log(arr.print());
+  // console.log(arr.find(33));
+  arr.traverse((value) => console.log(value));
 }
 
 // arrayBufferSandbox();
 // staticArraySandbox();
-// unsortedArraySandbox();
+unsortedArraySandbox();
