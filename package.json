@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "arraySandbox": "ts-node-dev --respawn ./javascript/arrays/sandbox.ts",
-    "statisticsExample": "ts-node-dev --respawn ./javascript/arrays/unsorted-array/example-statistics.ts"
+    "frequencyExample": "ts-node-dev --respawn ./javascript/arrays/unsorted-array/examples/frequency.ts"
   },
   "author": "",
   "license": "ISC",

@@ -2,11 +2,10 @@ import StaticArray, { TypedArray, TypedArrayType } from "../StaticArray";
 
 class UnsortedArray {
   private size: number;
-  private array: TypedArray;
+  private staticArray: TypedArray;
 
   constructor(maxSize: number, type: TypedArrayType) {
-    const arr = new StaticArray(maxSize, type);
-    this.array = arr.arr;
+    this.staticArray = new StaticArray(maxSize, type).arr;
     this.size = 0;
   }
 
@@ -15,15 +14,15 @@ class UnsortedArray {
   }
 
   print() {
-    return this.array.slice(0, this.size);
+    return this.staticArray.slice(0, this.size);
   }
 
   // TODO: newEntry should by constrained by the array type
   insert(newEntry: number): void {
-    if (this.size >= this.array.length) {
+    if (this.size >= this.staticArray.length) {
       throw new Error("The array is already full");
     }
-    this.array[this.size] = newEntry;
+    this.staticArray[this.size] = newEntry;
     this.size += 1;
   }
 
@@ -33,14 +32,14 @@ class UnsortedArray {
     } else if (index < 0 || index >= this.size) {
       throw new Error("Index out of range");
     } else {
-      this.array[index] = this.array[this.size - 1];
+      this.staticArray[index] = this.staticArray[this.size - 1];
       this.size -= 1;
     }
   }
 
   find(target: number): number {
     for (let i = 0; i < this.size; i++) {
-      if (this.array[i] === target) {
+      if (this.staticArray[i] === target) {
         return i;
       }
     }
@@ -49,7 +48,7 @@ class UnsortedArray {
 
   traverse(cb: (element: number | bigint) => void): void {
     for (let i = 0; i < this.size; i++) {
-      cb(this.array[i]);
+      cb(this.staticArray[i]);
     }
   }
 }

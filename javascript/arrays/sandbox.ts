@@ -35,10 +35,10 @@ function staticArraySandbox() {
 
 function unsortedArraySandbox() {
   console.log(chalk.blue.bold("UNSORTED ARRAY SANDBOX"));
-  const arr = new UnsortedArray(8, "B");
+  const arr = new UnsortedArray(1, "B");
   arr.insert(9);
   arr.insert(33);
-  arr.insert(99);
+  // arr.insert(99);
   // arr.insert(33);
   // arr.insert(33);
   // arr.insert(33);
