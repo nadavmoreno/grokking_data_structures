@@ -35,6 +35,7 @@ class UnsortedArray {
       this.staticArray[index] = this.staticArray[this.size - 1];
       this.size -= 1;
     }
+    console.log(this.staticArray);
   }
 
   find(target: number): number {
