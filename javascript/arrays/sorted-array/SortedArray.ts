@@ -81,22 +81,27 @@ class SortedArray {
   }
 
   binarySearch(target: number): number {
+    log(chalk.bgMagenta(`Binary searching array`));
     let right = this.size - 1;
     let left = 0;
     log({ right, left });
 
     while (left <= right) {
-      const midIndex = (right - left) / 2;
+      log(chalk.italic(`<------- Loop Iteration Start -------`));
+      const midIndex = (right + left) / 2;
       const midValue = this.staticArray[midIndex];
       log({ midIndex, midValue });
 
       if (target === midValue) {
+        log(chalk.italic(" ---------- Loop Iteration Break ------------>"));
         return midIndex;
       } else if (target > midValue) {
         left = midIndex;
       } else {
         right = midIndex;
       }
+      log({ right, left });
+      log(chalk.italic(" ------- Loop Iteration End ----------------->"));
     }
 
     return -1;
