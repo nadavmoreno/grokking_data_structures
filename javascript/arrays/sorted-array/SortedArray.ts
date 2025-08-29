@@ -81,7 +81,7 @@ class SortedArray {
   }
 
   binarySearch(target: number): number {
-    log(chalk.bgMagenta(`Binary searching array`));
+    log(chalk.bgYellow(`Searching the number: ${target}`));
     let right = this.size - 1;
     let left = 0;
     log({ right, left });
@@ -91,6 +91,7 @@ class SortedArray {
       const midIndex = (right + left) / 2;
       const midValue = this.staticArray[midIndex];
       log({ midIndex, midValue });
+      log({ right, left });
 
       if (target === midValue) {
         log(chalk.italic(" ---------- Loop Iteration Break ------------>"));
