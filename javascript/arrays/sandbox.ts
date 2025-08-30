@@ -77,7 +77,7 @@ function sortedArraySandbox() {
 
   console.log(arr.print());
   // console.log(arr.linearSearch(34));
-  console.log(arr.binarySearch(80));
+  console.log(arr.binarySearch(99));
 
   // arr.traverse((value) => {
   //

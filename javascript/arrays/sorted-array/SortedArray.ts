@@ -84,24 +84,22 @@ class SortedArray {
     log(chalk.bgYellow(`Searching the number: ${target}`));
     let right = this.size - 1;
     let left = 0;
-    log({ right, left });
 
     while (left <= right) {
-      log(chalk.italic(`<------- Loop Iteration Start -------`));
-      const midIndex = (right + left) / 2;
+      log(chalk.italic(`<------- Loop Iteration Start ---------------`));
+      const midIndex = Math.floor((right + left) / 2);
       const midValue = this.staticArray[midIndex];
-      log({ midIndex, midValue });
       log({ right, left });
+      log({ midIndex, midValue });
 
       if (target === midValue) {
         log(chalk.italic(" ---------- Loop Iteration Break ------------>"));
         return midIndex;
       } else if (target > midValue) {
-        left = midIndex;
+        left = midIndex + 1;
       } else {
-        right = midIndex;
+        right = midIndex - 1;
       }
-      log({ right, left });
       log(chalk.italic(" ------- Loop Iteration End ----------------->"));
     }
 
